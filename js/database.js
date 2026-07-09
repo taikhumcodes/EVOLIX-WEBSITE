@@ -25,7 +25,7 @@
   'use strict';
 
   // ---- 1. Paste your Supabase project credentials here ----
-  var SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL'; // e.g. https://xyzcompany.supabase.co
+  var SUPABASE_URL = 'https://volwwfndefvmptxvrutg.supabase.co'; // e.g. https://xyzcompany.supabase.co
   var SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_PUBLIC_KEY';
 
   var client = null;

@@ -100,7 +100,7 @@ submission in a real database, using [Supabase](https://supabase.com)
 4. Open `js/database.js` and paste them into the two constants at the top:
    ```js
    var SUPABASE_URL = 'https://your-project.supabase.co';
-   var SUPABASE_ANON_KEY = 'your-anon-public-key';
+   var SUPABASE_ANON_KEY = 'sb_publishable_B4DOOEe1FWb0bVRBAbMCrQ_Yq2xen4Z';
    ```
 5. Deploy/reload the site. From then on:
    - Every page load writes a row to `page_visits` (path, referrer, user
