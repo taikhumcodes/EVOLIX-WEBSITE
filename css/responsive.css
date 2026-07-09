@@ -1,0 +1,109 @@
+/* ==========================================================================
+   EVOLIX — responsive.css
+   Breakpoint overrides. Base styles in style.css are desktop-oriented;
+   this file scales them down for tablet and mobile.
+   ========================================================================== */
+
+/* ---------- Large Desktop (already default, minor max-width guard) ---------- */
+@media (min-width: 1440px) {
+  .container { max-width: 1360px; }
+}
+
+/* ---------- Laptop / Small Desktop ---------- */
+@media (max-width: 1180px) {
+  .hero__inner { gap: var(--space-12); }
+  .services__grid { gap: var(--space-4); }
+  .footer__top { grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  :root { --navbar-height: 72px; }
+
+  .navbar__list,
+  .navbar__actions .btn { display: none; }
+  .navbar__toggle { display: flex; }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-16);
+    text-align: left;
+  }
+  .hero__visual { order: -1; max-width: 480px; }
+  .dashboard-mock { transform: none; }
+  .hero__badge { left: var(--space-4); bottom: -16px; }
+
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .featured__panel { grid-template-columns: 1fr; }
+  .featured__visual { min-height: 260px; margin-bottom: var(--space-4); }
+
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .aplus__row { grid-template-columns: 1fr; }
+
+  .process__timeline { grid-template-columns: repeat(2, 1fr); row-gap: var(--space-12); }
+  .process__line { display: none; }
+
+  .why__grid { grid-template-columns: 1fr; }
+  .why__cards { grid-template-columns: repeat(2, 1fr); }
+  .why__counters { grid-template-columns: repeat(2, 1fr); }
+
+  .contact__panel { grid-template-columns: 1fr; padding: var(--space-8); }
+
+  .footer__top { grid-template-columns: 1fr 1fr; row-gap: var(--space-12); }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .container { padding: 0 var(--space-4); }
+
+  .section-heading { margin-bottom: var(--space-8); }
+  .section-title { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+
+  .hero { min-height: auto; padding-bottom: var(--space-16); }
+  .hero__title { font-size: clamp(2rem, 9vw, 2.75rem); }
+  .hero__subtitle { font-size: 1rem; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+  .hero__stats { gap: var(--space-6); }
+  .hero__scroll { display: none; }
+
+  .dashboard-mock__body { grid-template-columns: 1fr; }
+  .dashboard-mock__panel--chart { grid-column: 1; grid-row: auto; }
+  .hero__badge { position: static; margin-top: var(--space-4); display: inline-flex; }
+
+  .companies__group { gap: var(--space-8); padding: 0 var(--space-4); }
+
+  .services__grid { grid-template-columns: 1fr; }
+
+  .featured__stats { grid-template-columns: 1fr 1fr; row-gap: var(--space-4); }
+
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .process__timeline { grid-template-columns: 1fr; gap: var(--space-8); }
+
+  .why__cards { grid-template-columns: 1fr; }
+  .why__counters { grid-template-columns: 1fr 1fr; padding: var(--space-6); gap: var(--space-6); }
+
+  .testimonial-card { padding: var(--space-6); }
+  .testimonial-card__quote { font-size: 1.125rem; }
+
+  .contact__panel { padding: var(--space-6); }
+
+  .footer__top { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+
+  .back-to-top { bottom: var(--space-4); right: var(--space-4); width: 44px; height: 44px; }
+
+  .cursor-glow { display: none; }
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 380px) {
+  .hero__stats { flex-direction: column; gap: var(--space-4); }
+  .featured__stats { grid-template-columns: 1fr; }
+  .gallery__grid { grid-template-columns: 1fr; }
+  .why__counters { grid-template-columns: 1fr; }
+}

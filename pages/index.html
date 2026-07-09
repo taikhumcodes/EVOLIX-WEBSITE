@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Evolix — Business Growth & Technology Agency</title>
+  <meta name="description" content="Evolix is a business growth and technology agency building high-performance websites, brand systems, Amazon A+ content, and custom software for ambitious companies.">
+  <meta name="keywords" content="technology agency, web development, branding, Amazon A+ content, product photography, custom software, digital marketing">
+  <meta name="author" content="Evolix">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.evolix.agency/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Evolix — Business Growth & Technology Agency">
+  <meta property="og:description" content="We design, build and scale digital products — websites, brands, Amazon storefronts and custom software — for companies that refuse to look ordinary.">
+  <meta property="og:image" content="@@ROOT@@assets/hero/evolix-og-cover.jpg">
+  <meta property="og:url" content="https://www.evolix.agency/">
+  <meta property="og:site_name" content="Evolix">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Evolix — Business Growth & Technology Agency">
+  <meta name="twitter:description" content="We design, build and scale digital products for companies that refuse to look ordinary.">
+  <meta name="twitter:image" content="@@ROOT@@assets/hero/evolix-og-cover.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="@@ROOT@@assets/logo/favicon.svg">
+  <link rel="apple-touch-icon" href="@@ROOT@@assets/logo/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="@@ROOT@@css/style.css">
+  <link rel="stylesheet" href="@@ROOT@@css/animation.css">
+  <link rel="stylesheet" href="@@ROOT@@css/responsive.css">
+  <link rel="stylesheet" href="@@ROOT@@css/pages.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  @@HEADER@@
+
+  <main id="main-content">
+
+    <!-- ============================= -->
+    <!-- HERO -->
+    <!-- ============================= -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <canvas id="heroParticles" class="hero__particles"></canvas>
+      </div>
+
+      <div class="hero__floating" aria-hidden="true">
+        <span class="float-icon float-icon--1">◆</span>
+        <span class="float-icon float-icon--2">▲</span>
+        <span class="float-icon float-icon--3">●</span>
+        <span class="float-icon float-icon--4">■</span>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal" data-reveal>
+          <p class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            Business Growth & Technology Agency
+          </p>
+
+          <h1 class="hero__title">
+            We engineer brands
+            <span class="text-gradient">that outgrow</span>
+            their market.
+          </h1>
+
+          <p class="hero__subtitle">
+            Evolix pairs conversion-driven design with production-grade engineering —
+            websites, brand systems, Amazon storefronts and custom software built to
+            compound your growth, not just look good in a pitch deck.
+          </p>
+
+          <div class="hero__actions">
+            <a href="@@ROOT@@contact.html" class="btn btn--primary btn--lg btn--ripple">
+              <span>Book a Strategy Call</span>
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="@@ROOT@@work.html" class="btn btn--ghost btn--lg btn--ripple">
+              <span>View Our Work</span>
+            </a>
+          </div>
+
+          <dl class="hero__stats">
+            <div class="hero__stat">
+              <dt class="hero__stat-label">Client Revenue Generated</dt>
+              <dd class="hero__stat-value"><span class="counter" data-target="42" data-prefix="$" data-suffix="M+">0</span></dd>
+            </div>
+            <div class="hero__stat">
+              <dt class="hero__stat-label">Projects Shipped</dt>
+              <dd class="hero__stat-value"><span class="counter" data-target="180" data-suffix="+">0</span></dd>
+            </div>
+            <div class="hero__stat">
+              <dt class="hero__stat-label">Average Rating</dt>
+              <dd class="hero__stat-value"><span class="counter" data-target="4.9" data-decimals="1" data-suffix="/5">0</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal data-reveal-delay="150">
+          <div class="dashboard-mock glass" id="dashboardMock">
+            <div class="dashboard-mock__topbar">
+              <span class="dashboard-mock__dot"></span>
+              <span class="dashboard-mock__dot"></span>
+              <span class="dashboard-mock__dot"></span>
+              <span class="dashboard-mock__title">evolix-growth-os</span>
+            </div>
+            <div class="dashboard-mock__body">
+              <div class="dashboard-mock__panel dashboard-mock__panel--chart">
+                <p class="dashboard-mock__label">Organic Traffic</p>
+                <svg class="dashboard-mock__graph" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true">
+                  <polyline points="0,80 40,70 80,72 120,50 160,55 200,30 240,35 300,10" fill="none" stroke="url(#graphGradient)" stroke-width="3"/>
+                  <defs>
+                    <linearGradient id="graphGradient" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#2D8CFF"/>
+                      <stop offset="100%" stop-color="#63B3FF"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <p class="dashboard-mock__metric">+164% <span>QoQ</span></p>
+              </div>
+              <div class="dashboard-mock__panel">
+                <p class="dashboard-mock__label">Conversion Rate</p>
+                <p class="dashboard-mock__metric">6.8%</p>
+                <div class="dashboard-mock__bar"><span style="width:68%"></span></div>
+              </div>
+              <div class="dashboard-mock__panel">
+                <p class="dashboard-mock__label">Deploy Status</p>
+                <p class="dashboard-mock__status"><span class="status-dot"></span> Live · v4.2.0</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero__badge glass">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 9.5H22L15.75 14L18.25 21.5L12 17L5.75 21.5L8.25 14L2 9.5H9.5L12 2Z" fill="#63B3FF"/></svg>
+            <span>Awwwards-caliber craft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- TRUSTED COMPANIES -->
+    <!-- ============================= -->
+    <section class="companies" aria-label="Trusted by">
+      <div class="container">
+        <p class="companies__label reveal" data-reveal>Trusted by teams scaling from seed to Series C</p>
+      </div>
+      <div class="companies__marquee glass">
+        <div class="companies__track">
+          <div class="companies__group">
+            <span class="companies__logo">NORTHPEAK</span>
+            <span class="companies__logo">Lumen&nbsp;Supply&nbsp;Co.</span>
+            <span class="companies__logo">VERTEXA</span>
+            <span class="companies__logo">Halcyon&nbsp;Labs</span>
+            <span class="companies__logo">GRIDWORKS</span>
+            <span class="companies__logo">Solace&nbsp;Home</span>
+            <span class="companies__logo">FERRO&nbsp;+&nbsp;CO</span>
+            <span class="companies__logo">Meridian&nbsp;Outdoor</span>
+          </div>
+          <div class="companies__group" aria-hidden="true">
+            <span class="companies__logo">NORTHPEAK</span>
+            <span class="companies__logo">Lumen&nbsp;Supply&nbsp;Co.</span>
+            <span class="companies__logo">VERTEXA</span>
+            <span class="companies__logo">Halcyon&nbsp;Labs</span>
+            <span class="companies__logo">GRIDWORKS</span>
+            <span class="companies__logo">Solace&nbsp;Home</span>
+            <span class="companies__logo">FERRO&nbsp;+&nbsp;CO</span>
+            <span class="companies__logo">Meridian&nbsp;Outdoor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SERVICES OVERVIEW -->
+    <!-- ============================= -->
+    <section class="services">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Services</p>
+          <h2 class="section-title">One team. Every discipline your growth needs.</h2>
+          <p class="section-subtitle">From first pixel to production deploy, we cover the full stack of building a brand people trust and a product that performs.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card reveal" data-reveal data-reveal-delay="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V16C20 17.1046 19.1046 18 18 18H6C4.89543 18 4 17.1046 4 16V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M8 21H16M12 18V21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 9L10 12L7 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="service-card__title">Website Development</h3>
+            <p class="service-card__desc">Custom-coded, high-performance websites built for speed, SEO and conversion.</p>
+            <a href="@@ROOT@@services/website-development.html" class="service-card__link">Explore Development
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal" data-reveal data-reveal-delay="80">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 4C12 4 15 7.5 15 12C15 16.5 12 20 12 20C12 20 9 16.5 9 12C9 7.5 12 4 12 4Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 12H20" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3 class="service-card__title">Branding</h3>
+            <p class="service-card__desc">Identity systems built to hold up across packaging, ads, product and web.</p>
+            <a href="@@ROOT@@services/branding.html" class="service-card__link">Explore Branding
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal" data-reveal data-reveal-delay="160">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21H16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 9H11M7 12H14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="service-card__title">Amazon A+ Content</h3>
+            <p class="service-card__desc">Premium A+ modules and Storefronts engineered to lift conversion rate.</p>
+            <a href="@@ROOT@@services/amazon-aplus-content.html" class="service-card__link">Explore A+ Content
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal" data-reveal data-reveal-delay="0">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15L16 10L5 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="service-card__title">Product Photography</h3>
+            <p class="service-card__desc">Studio and lifestyle photography, retouched for e-commerce and ads.</p>
+            <a href="@@ROOT@@services/product-photography.html" class="service-card__link">Explore Photography
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal" data-reveal data-reveal-delay="80">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 3L4 8L9 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 3L20 8L15 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 3L11 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="service-card__title">Custom Software</h3>
+            <p class="service-card__desc">Internal tools, dashboards and integrations built around your workflow.</p>
+            <a href="@@ROOT@@services/custom-software.html" class="service-card__link">Explore Software
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card reveal" data-reveal data-reveal-delay="160">
+            <div class="service-card__glow" aria-hidden="true"></div>
+            <div class="service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 11L19 4L14 20L11 13L3 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="service-card__title">Digital Marketing</h3>
+            <p class="service-card__desc">Paid media, SEO and lifecycle campaigns built on data, not guesswork.</p>
+            <a href="@@ROOT@@services/digital-marketing.html" class="service-card__link">Explore Marketing
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FEATURED PROJECT TEASER -->
+    <!-- ============================= -->
+    <section class="featured">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Featured Case Study</p>
+          <h2 class="section-title">Solace Home: from Shopify starter to category leader.</h2>
+        </div>
+
+        <div class="featured__panel glass reveal" data-reveal>
+          <div class="featured__visual">
+            <div class="mockup-laptop">
+              <img src="@@ROOT@@assets/mockups/solace-laptop-screen.jpg" alt="Solace Home website homepage displayed on a laptop screen" class="mockup-laptop__screen" loading="lazy" width="640" height="400">
+            </div>
+            <div class="mockup-phone">
+              <img src="@@ROOT@@assets/mockups/solace-phone-screen.jpg" alt="Solace Home mobile checkout flow displayed on a smartphone" class="mockup-phone__screen" loading="lazy" width="220" height="440">
+            </div>
+          </div>
+
+          <div class="featured__content">
+            <p class="featured__client">Solace Home — Direct-to-Consumer Furniture</p>
+            <p class="featured__desc">
+              Solace came to us on a slow, generic storefront losing customers to load time
+              and confusing navigation. We rebuilt their site, their product photography
+              system, and their checkout flow from the ground up.
+            </p>
+
+            <dl class="featured__stats">
+              <div class="featured__stat">
+                <dt>Conversion Rate</dt>
+                <dd>+118%</dd>
+              </div>
+              <div class="featured__stat">
+                <dt>Page Load Time</dt>
+                <dd>-72%</dd>
+              </div>
+              <div class="featured__stat">
+                <dt>Revenue, 6 Months</dt>
+                <dd>+$3.1M</dd>
+              </div>
+            </dl>
+
+            <a href="@@ROOT@@work.html" class="btn btn--primary btn--ripple">
+              <span>View Case Study</span>
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- WHY EVOLIX (condensed) -->
+    <!-- ============================= -->
+    <section class="why">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Why Evolix</p>
+          <h2 class="section-title">Built by operators, not just designers.</h2>
+        </div>
+
+        <div class="why__cards">
+          <div class="why-card reveal" data-reveal>
+            <div class="why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.5 13.5H11L10 22L18.5 9.5H12L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="why-card__title">Speed without shortcuts</h3>
+            <p class="why-card__desc">Hand-coded builds ship faster than most agencies' proposals — and outperform template-based sites on every metric that matters.</p>
+          </div>
+          <div class="why-card reveal" data-reveal data-reveal-delay="80">
+            <div class="why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 17 16.5 20.5 12 22C7.5 20.5 4 17 4 12V6L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="why-card__title">One team, zero handoffs</h3>
+            <p class="why-card__desc">Strategy, design, engineering and photography under one roof — no lost context between disconnected vendors.</p>
+          </div>
+          <div class="why-card reveal" data-reveal data-reveal-delay="160">
+            <div class="why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 9L11 13L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="why-card__title">Data-backed decisions</h3>
+            <p class="why-card__desc">Every design choice is tied to a metric we track post-launch — conversion, load time, retention — not just aesthetics.</p>
+          </div>
+        </div>
+
+        <div class="page-hero__actions" style="margin-top: var(--space-12); justify-content: center;">
+          <a href="@@ROOT@@about.html" class="btn btn--ghost btn--ripple"><span>More About Evolix</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- TESTIMONIAL SNIPPET -->
+    <!-- ============================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Client Voices</p>
+          <h2 class="section-title">Trusted by founders who care about the details.</h2>
+        </div>
+
+        <blockquote class="testimonial-card glass reveal" data-reveal style="max-width: 720px; margin: 0 auto;">
+          <div class="testimonial-card__rating" aria-label="Rating: 5 out of 5">★★★★★</div>
+          <p class="testimonial-card__quote">Evolix rebuilt our entire storefront in six weeks and our conversion rate nearly doubled. They think like operators, not just designers.</p>
+          <footer class="testimonial-card__author">
+            <img src="@@ROOT@@assets/testimonials/dana-oyelaran.jpg" alt="Portrait of Dana Oyelaran" loading="lazy" width="48" height="48">
+            <div>
+              <cite class="testimonial-card__name">Dana Oyelaran</cite>
+              <span class="testimonial-card__company">Founder, Solace Home</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <div class="page-hero__actions" style="margin-top: var(--space-12); justify-content: center;">
+          <a href="@@ROOT@@about.html" class="btn btn--ghost btn--ripple"><span>Read More Client Stories</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- CTA BAND -->
+    <!-- ============================= -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__panel glass reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Get In Touch</p>
+          <h2 class="cta-band__title">Let's build something that outgrows the market.</h2>
+          <a href="@@ROOT@@contact.html" class="btn btn--primary btn--lg btn--ripple">
+            <span>Start a Project</span>
+            <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  @@FOOTER@@
+
+  <script src="@@ROOT@@js/database.js" defer></script>
+  <script src="@@ROOT@@js/main.js" defer></script>
+  <script src="@@ROOT@@js/gallery.js" defer></script>
+  <script src="@@ROOT@@js/animations.js" defer></script>
+</body>
+</html>

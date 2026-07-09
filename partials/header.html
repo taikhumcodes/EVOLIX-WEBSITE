@@ -1,0 +1,43 @@
+<header class="navbar" id="navbar">
+  <div class="navbar__inner container">
+    <a href="@@ROOT@@index.html" class="navbar__logo" aria-label="Evolix home">
+      <img src="@@ROOT@@assets/logo/evolix-mark.svg" alt="" class="navbar__logo-mark" width="32" height="32">
+      <span class="navbar__logo-text">EVOLIX</span>
+    </a>
+
+    <nav class="navbar__nav" id="primaryNav" aria-label="Primary">
+      <ul class="navbar__list">
+        <li><a href="@@ROOT@@index.html" class="navbar__link @@ACTIVE:home@@">Home</a></li>
+        <li><a href="@@ROOT@@services.html" class="navbar__link @@ACTIVE:services@@">Services</a></li>
+        <li><a href="@@ROOT@@work.html" class="navbar__link @@ACTIVE:work@@">Work</a></li>
+        <li><a href="@@ROOT@@about.html" class="navbar__link @@ACTIVE:about@@">About</a></li>
+        <li><a href="@@ROOT@@faq.html" class="navbar__link @@ACTIVE:faq@@">FAQ</a></li>
+        <li><a href="@@ROOT@@contact.html" class="navbar__link @@ACTIVE:contact@@">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="@@ROOT@@contact.html" class="btn btn--primary btn--sm">
+        <span>Start a Project</span>
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" data-state="closed">
+    <ul class="mobile-nav__list">
+      <li><a href="@@ROOT@@index.html" class="mobile-nav__link @@ACTIVE:home@@">Home</a></li>
+      <li><a href="@@ROOT@@services.html" class="mobile-nav__link @@ACTIVE:services@@">Services</a></li>
+      <li><a href="@@ROOT@@work.html" class="mobile-nav__link @@ACTIVE:work@@">Work</a></li>
+      <li><a href="@@ROOT@@about.html" class="mobile-nav__link @@ACTIVE:about@@">About</a></li>
+      <li><a href="@@ROOT@@faq.html" class="mobile-nav__link @@ACTIVE:faq@@">FAQ</a></li>
+      <li><a href="@@ROOT@@contact.html" class="mobile-nav__link @@ACTIVE:contact@@">Contact</a></li>
+      <li><a href="@@ROOT@@contact.html" class="mobile-nav__link mobile-nav__link--cta">Start a Project</a></li>
+    </ul>
+  </nav>
+</header>

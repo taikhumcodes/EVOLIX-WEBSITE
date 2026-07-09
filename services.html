@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Services — Evolix | Web Development, Branding, Amazon A+ & More</title>
+  <meta name="description" content="Explore Evolix's six core services: website development, branding, Amazon A+ content, product photography, custom software and digital marketing.">
+  <meta name="keywords" content="agency services, web development, branding, Amazon A+ content, product photography, custom software, digital marketing">
+  <meta name="author" content="Evolix">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.evolix.agency/services.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Services — Evolix">
+  <meta property="og:description" content="One team, every discipline your growth needs — websites, brands, Amazon storefronts, photography, software and marketing.">
+  <meta property="og:image" content="assets/hero/evolix-og-cover.jpg">
+  <meta property="og:url" content="https://www.evolix.agency/services.html">
+  <meta property="og:site_name" content="Evolix">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services — Evolix">
+  <meta name="twitter:description" content="One team, every discipline your growth needs.">
+  <meta name="twitter:image" content="assets/hero/evolix-og-cover.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
+  <div class="navbar__inner container">
+    <a href="index.html" class="navbar__logo" aria-label="Evolix home">
+      <img src="assets/logo/evolix-mark.svg" alt="" class="navbar__logo-mark" width="32" height="32">
+      <span class="navbar__logo-text">EVOLIX</span>
+    </a>
+
+    <nav class="navbar__nav" id="primaryNav" aria-label="Primary">
+      <ul class="navbar__list">
+        <li><a href="index.html" class="navbar__link ">Home</a></li>
+        <li><a href="services.html" class="navbar__link is-active">Services</a></li>
+        <li><a href="work.html" class="navbar__link ">Work</a></li>
+        <li><a href="about.html" class="navbar__link ">About</a></li>
+        <li><a href="faq.html" class="navbar__link ">FAQ</a></li>
+        <li><a href="contact.html" class="navbar__link ">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="contact.html" class="btn btn--primary btn--sm">
+        <span>Start a Project</span>
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" data-state="closed">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link ">Home</a></li>
+      <li><a href="services.html" class="mobile-nav__link is-active">Services</a></li>
+      <li><a href="work.html" class="mobile-nav__link ">Work</a></li>
+      <li><a href="about.html" class="mobile-nav__link ">About</a></li>
+      <li><a href="faq.html" class="mobile-nav__link ">FAQ</a></li>
+      <li><a href="contact.html" class="mobile-nav__link ">Contact</a></li>
+      <li><a href="contact.html" class="mobile-nav__link mobile-nav__link--cta">Start a Project</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main id="main-content">
+
+    <section class="page-hero">
+      <div class="page-hero__glow" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumbs__sep">/</span>
+          <span class="breadcrumbs__current">Services</span>
+        </nav>
+        <div class="page-hero__inner reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Services</p>
+          <h1 class="page-hero__title">One team. Every discipline your growth needs.</h1>
+          <p class="page-hero__subtitle">From first pixel to production deploy, we cover the full stack of building a brand people trust and a product that performs. Explore each service below.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-hub">
+      <div class="container">
+        <div class="services-hub__grid">
+
+          <article class="services-hub__card reveal" data-reveal data-reveal-delay="0">
+            <div class="services-hub__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V16C20 17.1046 19.1046 18 18 18H6C4.89543 18 4 17.1046 4 16V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M8 21H16M12 18V21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 9L10 12L7 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="services-hub__title">Website Development</h2>
+            <p class="services-hub__desc">Custom-coded, high-performance websites built for speed, SEO and conversion — no bloated builders, no templates.</p>
+            <a href="services/website-development.html" class="services-hub__link">Explore Development
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="services-hub__card reveal" data-reveal data-reveal-delay="80">
+            <div class="services-hub__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 4C12 4 15 7.5 15 12C15 16.5 12 20 12 20C12 20 9 16.5 9 12C9 7.5 12 4 12 4Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 12H20" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h2 class="services-hub__title">Branding</h2>
+            <p class="services-hub__desc">Identity systems — logo, voice, color, type — built to hold up across packaging, ads, product and web.</p>
+            <a href="services/branding.html" class="services-hub__link">Explore Branding
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="services-hub__card reveal" data-reveal data-reveal-delay="160">
+            <div class="services-hub__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 21H16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 9H11M7 12H14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h2 class="services-hub__title">Amazon A+ Content</h2>
+            <p class="services-hub__desc">Premium A+ modules and Storefronts engineered to lift conversion rate and defend against copycats.</p>
+            <a href="services/amazon-aplus-content.html" class="services-hub__link">Explore A+ Content
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="services-hub__card reveal" data-reveal data-reveal-delay="0">
+            <div class="services-hub__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15L16 10L5 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="services-hub__title">Product Photography</h2>
+            <p class="services-hub__desc">Studio and lifestyle photography, retouched for e-commerce, ads and packaging — shot to sell, not just to look nice.</p>
+            <a href="services/product-photography.html" class="services-hub__link">Explore Photography
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="services-hub__card reveal" data-reveal data-reveal-delay="80">
+            <div class="services-hub__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 3L4 8L9 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 3L20 8L15 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 3L11 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h2 class="services-hub__title">Custom Software</h2>
+            <p class="services-hub__desc">Internal tools, dashboards and integrations engineered around how your team actually operates.</p>
+            <a href="services/custom-software.html" class="services-hub__link">Explore Software
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="services-hub__card reveal" data-reveal data-reveal-delay="160">
+            <div class="services-hub__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 11L19 4L14 20L11 13L3 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h2 class="services-hub__title">Digital Marketing</h2>
+            <p class="services-hub__desc">Paid media, SEO and lifecycle campaigns built on the same data that informs your product decisions.</p>
+            <a href="services/digital-marketing.html" class="services-hub__link">Explore Marketing
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band__panel glass reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Get In Touch</p>
+          <h2 class="cta-band__title">Not sure which service you need? Let's talk it through.</h2>
+          <a href="contact.html" class="btn btn--primary btn--lg btn--ripple">
+            <span>Book a Strategy Call</span>
+            <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="assets/logo/evolix-mark.svg" alt="" width="32" height="32">
+          <span>EVOLIX</span>
+        </a>
+        <p class="footer__tagline">Business Growth & Technology Agency</p>
+        <div class="footer__social">
+          <a href="https://instagram.com/evolix.agency" aria-label="Evolix on Instagram" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/evolix" aria-label="Evolix on LinkedIn" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 10V17M7 7V7.01M12 17V13C12 11.5 13 10.5 14.5 10.5C16 10.5 17 11.5 17 13V17M12 10.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://x.com/evolixagency" aria-label="Evolix on X" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4L20 20M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+          <a href="https://dribbble.com/evolix" aria-label="Evolix on Dribbble" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M4 10C8 11 16 11 20 8M3 15C8 13 17 15 19 19M12 3C14 7 15 13 13 21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Services">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services/website-development.html">Website Development</a></li>
+          <li><a href="services/branding.html">Branding</a></li>
+          <li><a href="services/amazon-aplus-content.html">Amazon A+ Content</a></li>
+          <li><a href="services/product-photography.html">Product Photography</a></li>
+          <li><a href="services/custom-software.html">Custom Software</a></li>
+          <li><a href="services/digital-marketing.html">Digital Marketing</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col footer__newsletter">
+        <h4>Stay in the loop</h4>
+        <p>Growth insights and case studies, once a month. No spam.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <label for="newsletterEmail" class="sr-only">Email address</label>
+          <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="you@company.com" required aria-required="true">
+          <button type="submit" aria-label="Subscribe">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+        <p class="form-status" id="newsletterStatus" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="currentYear">2026</span> Evolix Agency LLC. All rights reserved.</p>
+      <ul class="footer__legal">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+
+  <script src="js/database.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
