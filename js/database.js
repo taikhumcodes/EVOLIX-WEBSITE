@@ -26,7 +26,7 @@
 
   // ---- 1. Paste your Supabase project credentials here ----
   var SUPABASE_URL = 'https://volwwfndefvmptxvrutg.supabase.co'; // e.g. https://xyzcompany.supabase.co
-  var SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_PUBLIC_KEY';
+  var SUPABASE_ANON_KEY = 'sb_publishable_B4DOOEe1FWb0bVRBAbMCrQ_Yq2xen4Z';
 
   var client = null;
 
