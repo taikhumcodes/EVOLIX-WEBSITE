@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="@@ROOT@@css/animation.css">
   <link rel="stylesheet" href="@@ROOT@@css/responsive.css">
   <link rel="stylesheet" href="@@ROOT@@css/pages.css">
+  <link rel="stylesheet" href="@@ROOT@@css/portal.css">
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
 </head>
@@ -165,6 +166,51 @@
       </div>
     </section>
 
+    <section class="portal-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Proof of Work</p>
+          <h2 class="section-title">Live from the team</h2>
+        </div>
+
+        <div class="portal-grid" data-portal-category="custom-software"></div>
+
+        <div class="portal-manage" data-portal-manage="custom-software">
+          <button class="portal-manage__trigger" type="button">Manage Content</button>
+
+          <div class="portal-login" hidden>
+            <input type="email" class="portal-login__email" placeholder="Team email" autocomplete="username">
+            <input type="password" class="portal-login__password" placeholder="Password" autocomplete="current-password">
+            <button type="button" class="portal-login__submit">Unlock</button>
+            <span class="portal-login__error"></span>
+          </div>
+
+          <div class="portal-upload" hidden>
+            <button type="button" class="portal-lock-btn">Lock</button>
+            <form class="portal-upload__form">
+              <label>Title
+                <input type="text" name="title" placeholder="e.g. Meridian Outdoor — Fulfillment Dashboard" required>
+              </label>
+              <label>Link (optional)
+                <input type="url" name="link" placeholder="https://...">
+              </label>
+              <label style="grid-column: 1 / -1;">Description
+                <textarea name="description" placeholder="A short note on what this build involved"></textarea>
+              </label>
+              <label>Image (optional)
+                <input type="file" name="image" accept="image/*">
+              </label>
+              <label>File — PPT / PDF (optional)
+                <input type="file" name="file" accept=".ppt,.pptx,.pdf">
+              </label>
+              <button type="submit">Add to page</button>
+              <span class="portal-upload__status"></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-band">
       <div class="container">
         <div class="cta-band__panel glass reveal" data-reveal>
@@ -183,6 +229,7 @@
   @@FOOTER@@
 
   <script src="@@ROOT@@js/database.js" defer></script>
+  <script src="@@ROOT@@js/portal.js" defer></script>
   <script src="@@ROOT@@js/main.js" defer></script>
   <script src="@@ROOT@@js/gallery.js" defer></script>
   <script src="@@ROOT@@js/animations.js" defer></script>

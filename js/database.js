@@ -125,10 +125,11 @@
 
   document.addEventListener('DOMContentLoaded', logVisit);
 
-  // Expose a small public API for main.js to use
+  // Expose a small public API for main.js and portal.js to use
   window.EvolixDB = {
     saveInquiry: saveInquiry,
     saveNewsletterSignup: saveNewsletterSignup,
-    isConfigured: function () { return !!getClient(); }
+    isConfigured: function () { return !!getClient(); },
+    getClient: getClient
   };
 })();

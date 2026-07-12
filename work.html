@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/portal.css">
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
 </head>
@@ -155,12 +156,51 @@
           </div>
         </div>
 
-        <div class="work-hub__grid" style="margin-top: var(--space-16);">
-          <div class="work-hub__placeholder reveal" data-reveal>
-            <p>More case studies are in progress — check back soon, or ask us directly about results in your industry.</p>
-          </div>
+      </div>
+    </section>
+
+    <section class="portal-section">
+      <div class="container">
+        <div class="section-heading reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>More From Our Work</p>
+          <h2 class="section-title">Live from the team</h2>
         </div>
 
+        <div class="portal-grid" data-portal-category="work"></div>
+
+        <div class="portal-manage" data-portal-manage="work">
+          <button class="portal-manage__trigger" type="button">Manage Content</button>
+
+          <div class="portal-login" hidden>
+            <input type="email" class="portal-login__email" placeholder="Team email" autocomplete="username">
+            <input type="password" class="portal-login__password" placeholder="Password" autocomplete="current-password">
+            <button type="button" class="portal-login__submit">Unlock</button>
+            <span class="portal-login__error"></span>
+          </div>
+
+          <div class="portal-upload" hidden>
+            <button type="button" class="portal-lock-btn">Lock</button>
+            <form class="portal-upload__form">
+              <label>Title
+                <input type="text" name="title" placeholder="e.g. Northpeak Nutrition — Site Rebuild" required>
+              </label>
+              <label>Link (optional)
+                <input type="url" name="link" placeholder="https://...">
+              </label>
+              <label style="grid-column: 1 / -1;">Description
+                <textarea name="description" placeholder="A short note on what this project involved"></textarea>
+              </label>
+              <label>Image (optional)
+                <input type="file" name="image" accept="image/*">
+              </label>
+              <label>File — PPT / PDF (optional)
+                <input type="file" name="file" accept=".ppt,.pptx,.pdf">
+              </label>
+              <button type="submit">Add to page</button>
+              <span class="portal-upload__status"></span>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -257,6 +297,7 @@
 
 
   <script src="js/database.js" defer></script>
+  <script src="js/portal.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/gallery.js" defer></script>
   <script src="js/animations.js" defer></script>

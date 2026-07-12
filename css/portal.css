@@ -1,0 +1,270 @@
+/* ==========================================================================
+   EVOLIX — portal.css
+   Inline "Manage Content" portal styling — grid cards, login box,
+   upload form, and per-card edit/hide/delete controls.
+   ========================================================================== */
+
+.portal-section { padding: var(--space-16) 0 var(--space-24); }
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.portal-empty {
+  grid-column: 1 / -1;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  padding: var(--space-8);
+  text-align: center;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.portal-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast);
+}
+
+.portal-card--hidden {
+  opacity: 0.55;
+  border-style: dashed;
+}
+
+.portal-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.portal-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portal-card__media-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.portal-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: rgba(5, 8, 22, 0.85);
+  border: 1px solid var(--color-glass-border);
+  color: var(--color-muted);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.portal-card__body {
+  padding: var(--space-4);
+  flex: 1;
+}
+
+.portal-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.portal-card__desc {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.portal-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.portal-card__link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+.portal-card__link:hover { border-color: var(--color-accent); }
+
+.portal-card__controls {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.portal-card__btn {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+.portal-card__btn:hover { border-color: var(--color-accent); color: var(--color-text); }
+.portal-card__btn--danger:hover { border-color: #FF6B6B; color: #FF6B6B; }
+
+/* ---------- Manage Content block ---------- */
+.portal-manage {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+.portal-manage__trigger {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+}
+.portal-manage__trigger:hover { color: var(--color-text); border-color: var(--color-accent); }
+
+.portal-login {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: var(--space-4);
+  max-width: 480px;
+}
+
+.portal-login input {
+  flex: 1;
+  min-width: 160px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  font-size: 0.875rem;
+}
+.portal-login input:focus { border-color: var(--color-accent); outline: none; }
+
+.portal-login__submit {
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  border: none;
+}
+
+.portal-login__error {
+  width: 100%;
+  font-size: 0.75rem;
+  color: #FF6B6B;
+}
+
+.portal-upload {
+  margin-top: var(--space-4);
+}
+
+.portal-lock-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+.portal-lock-btn:hover { color: #FF6B6B; border-color: #FF6B6B; }
+
+.portal-upload__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border);
+}
+
+.portal-upload__form input[type="text"],
+.portal-upload__form input[type="url"],
+.portal-upload__form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-family: var(--font-primary);
+}
+.portal-upload__form textarea { grid-column: 1 / -1; min-height: 70px; resize: vertical; }
+.portal-upload__form input[type="text"]:focus,
+.portal-upload__form input[type="url"]:focus,
+.portal-upload__form textarea:focus { border-color: var(--color-accent); outline: none; }
+
+.portal-upload__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.portal-upload__form input[type="file"] {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.portal-upload__form button[type="submit"] {
+  grid-column: 1 / -1;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  justify-self: start;
+}
+
+.portal-upload__status {
+  grid-column: 1 / -1;
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+}
+
+@media (max-width: 720px) {
+  .portal-grid { grid-template-columns: repeat(2, 1fr); }
+  .portal-upload__form { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .portal-grid { grid-template-columns: 1fr; }
+}
