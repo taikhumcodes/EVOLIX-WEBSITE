@@ -119,13 +119,16 @@
     <section class="portal-section">
       <div class="container">
         <div class="section-heading reveal" data-reveal>
-          <p class="eyebrow"><span class="eyebrow__dot"></span>More From Our Work</p>
-          <h2 class="section-title">Live from the team</h2>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>All Our Work</p>
+          <h2 class="section-title">Browse by service, or see everything.</h2>
+          <p class="section-subtitle">Every project we've shipped, organized the way you'd look for it.</p>
         </div>
 
-        <div class="portal-grid" data-portal-category="work"></div>
+        <div class="portal-filters" data-portal-filters></div>
 
-        <div class="portal-manage" data-portal-manage="work">
+        <div class="portal-grid" data-portal-grid></div>
+
+        <div class="portal-manage" data-portal-manage>
           <button class="portal-manage__trigger" type="button">Manage Content</button>
 
           <div class="portal-login" hidden>
@@ -138,20 +141,31 @@
           <div class="portal-upload" hidden>
             <button type="button" class="portal-lock-btn">Lock</button>
             <form class="portal-upload__form">
+              <label>Category
+                <select name="category" required>
+                  <option value="">Choose a category</option>
+                  <option value="website-development">Website Development</option>
+                  <option value="branding">Branding</option>
+                  <option value="amazon-aplus">Amazon A+ Content</option>
+                  <option value="product-photography">Product Photography</option>
+                  <option value="custom-software">Custom Software</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                </select>
+              </label>
               <label>Title
                 <input type="text" name="title" placeholder="e.g. Northpeak Nutrition — Site Rebuild" required>
-              </label>
-              <label>Link (optional)
-                <input type="url" name="link" placeholder="https://...">
               </label>
               <label style="grid-column: 1 / -1;">Description
                 <textarea name="description" placeholder="A short note on what this project involved"></textarea>
               </label>
-              <label>Image (optional)
-                <input type="file" name="image" accept="image/*">
+              <label>Images (optional, select multiple)
+                <input type="file" name="images" accept="image/*" multiple>
               </label>
               <label>File — PPT / PDF (optional)
                 <input type="file" name="file" accept=".ppt,.pptx,.pdf">
+              </label>
+              <label>Link (optional)
+                <input type="url" name="link" placeholder="https://...">
               </label>
               <button type="submit">Add to page</button>
               <span class="portal-upload__status"></span>
