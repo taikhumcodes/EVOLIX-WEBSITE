@@ -3,372 +3,277 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>About Evolix — Our Process & Why Clients Choose Us</title>
-  <meta name="description" content="How Evolix works: a tight four-stage process, the operators behind it, and what clients say after working with us.">
-  <meta name="keywords" content="about Evolix, agency process, why choose Evolix, client testimonials">
-  <meta name="author" content="Evolix">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.evolix.agency/about.html">
+  <title>EVOLIX — System Under Maintenance</title>
+  
+  <!-- Font -->
+  <link href="https://db.onlinewebfonts.com/c/e66905e07608167a84e6ad52f638c3c6?family=Helvetica+Now+Var" rel="stylesheet">
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="About Evolix">
-  <meta property="og:description" content="A tight four-stage process, built by operators, not just designers.">
-  <meta property="og:image" content="assets/hero/evolix-og-cover.jpg">
-  <meta property="og:url" content="https://www.evolix.agency/about.html">
-  <meta property="og:site_name" content="Evolix">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '475px',
+          }
+        }
+      }
+    }
+  </script>
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Evolix">
-  <meta name="twitter:description" content="A tight four-stage process, built by operators, not just designers.">
-  <meta name="twitter:image" content="assets/hero/evolix-og-cover.jpg">
+  <!-- React & React DOM -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  
+  <!-- Babel -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <style>
+    .four-oh-four {
+      text-shadow: 0 0 80px rgba(255,255,255,0.3), 0 0 160px rgba(255,255,255,0.1);
+    }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animation.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/pages.css">
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.01);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+        rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+        rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-black text-white antialiased overflow-x-hidden">
+  <div id="root"></div>
 
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
 
-  <header class="navbar" id="navbar">
-  <div class="navbar__inner container">
-    <a href="index.html" class="navbar__logo" aria-label="Evolix home">
-      <img src="assets/logo/evolix-mark.svg" alt="" class="navbar__logo-mark" width="32" height="32">
-      <span class="navbar__logo-text">EVOLIX</span>
-    </a>
+    // SVG Icons
+    const ArrowRight = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    );
 
-    <nav class="navbar__nav" id="primaryNav" aria-label="Primary">
-      <ul class="navbar__list">
-        <li><a href="index.html" class="navbar__link ">Home</a></li>
-        <li><a href="services.html" class="navbar__link ">Services</a></li>
-        <li><a href="work.html" class="navbar__link ">Work</a></li>
-        <li><a href="about.html" class="navbar__link is-active">About</a></li>
-        <li><a href="faq.html" class="navbar__link ">FAQ</a></li>
-        <li><a href="contact.html" class="navbar__link ">Contact</a></li>
-      </ul>
-    </nav>
+    const Facebook = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    );
 
-    <div class="navbar__actions">
-      <a href="contact.html" class="btn btn--primary btn--sm">
-        <span>Start a Project</span>
-      </a>
-      <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
-    </div>
-  </div>
+    const Twitter = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+      </svg>
+    );
 
-  <!-- Mobile nav -->
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" data-state="closed">
-    <ul class="mobile-nav__list">
-      <li><a href="index.html" class="mobile-nav__link ">Home</a></li>
-      <li><a href="services.html" class="mobile-nav__link ">Services</a></li>
-      <li><a href="work.html" class="mobile-nav__link ">Work</a></li>
-      <li><a href="about.html" class="mobile-nav__link is-active">About</a></li>
-      <li><a href="faq.html" class="mobile-nav__link ">FAQ</a></li>
-      <li><a href="contact.html" class="mobile-nav__link ">Contact</a></li>
-      <li><a href="contact.html" class="mobile-nav__link mobile-nav__link--cta">Start a Project</a></li>
-    </ul>
-  </nav>
-</header>
+    const Dribbble = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
+        <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
+        <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
+      </svg>
+    );
 
+    const Youtube = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+        <polygon points="10 15 15 12 10 9 10 15" />
+      </svg>
+    );
 
-  <main id="main-content">
+    const Linkedin = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect width="4" height="12" x="2" y="9" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    );
 
-    <section class="page-hero">
-      <div class="page-hero__glow" aria-hidden="true"></div>
-      <div class="container">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span class="breadcrumbs__sep">/</span>
-          <span class="breadcrumbs__current">About</span>
-        </nav>
-        <div class="page-hero__inner reveal" data-reveal>
-          <p class="eyebrow"><span class="eyebrow__dot"></span>About Evolix</p>
-          <h1 class="page-hero__title">Built by operators, not just designers.</h1>
-          <p class="page-hero__subtitle">A tight process, a senior-only team, and decisions tied to metrics instead of taste alone.</p>
-        </div>
-      </div>
-    </section>
+    const Instagram = ({ className = "w-4 h-4" }) => (
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+      </svg>
+    );
 
-    <section class="process">
-      <div class="container">
-        <div class="section-heading reveal" data-reveal>
-          <p class="eyebrow"><span class="eyebrow__dot"></span>How We Work</p>
-          <h2 class="section-title">A tight, four-stage process. No surprises.</h2>
-        </div>
+    // EVOLIX Official Geometric 'E' Logo (Matching actual logo image)
+    const LogoIcon = ({ className = "w-8 h-8" }) => (
+      <svg viewBox="0 0 400 400" className={className} xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="evolixGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#E59B34"/>
+            <stop offset="100%" stopColor="#C47F22"/>
+          </linearGradient>
+        </defs>
+        {/* Left Dark Bar */}
+        <path 
+          d="M 95 125 C 95 105, 110 95, 137 95 L 137 295 C 110 295, 95 285, 95 265 Z" 
+          fill="#2D2D2D" 
+          stroke="#444444"
+          strokeWidth="2"
+        />
+        {/* Top Arm */}
+        <path 
+          d="M 137 95 L 223 45 L 265 70 L 137 145 Z" 
+          fill="url(#evolixGoldGrad)" 
+        />
+        {/* Middle Arm */}
+        <path 
+          d="M 137 175 L 314 105 L 314 158 L 137 235 Z" 
+          fill="url(#evolixGoldGrad)" 
+        />
+        {/* Bottom Arm */}
+        <path 
+          d="M 137 245 L 223 295 L 314 245 L 314 298 L 223 348 L 137 295 Z" 
+          fill="url(#evolixGoldGrad)" 
+        />
+      </svg>
+    );
 
-        <ol class="process__timeline">
-          <li class="process__step reveal" data-reveal>
-            <span class="process__number">01</span>
-            <div class="process__line" aria-hidden="true"><span class="process__line-fill"></span></div>
-            <h3 class="process__title">Discovery</h3>
-            <p class="process__desc">We audit your brand, market and current funnel to find the highest-leverage problems worth solving first.</p>
-          </li>
-          <li class="process__step reveal" data-reveal data-reveal-delay="100">
-            <span class="process__number">02</span>
-            <div class="process__line" aria-hidden="true"><span class="process__line-fill"></span></div>
-            <h3 class="process__title">Design</h3>
-            <p class="process__desc">We design the system — visual identity, UX flows and content — and get sign-off before a line of code is written.</p>
-          </li>
-          <li class="process__step reveal" data-reveal data-reveal-delay="200">
-            <span class="process__number">03</span>
-            <div class="process__line" aria-hidden="true"><span class="process__line-fill"></span></div>
-            <h3 class="process__title">Development</h3>
-            <p class="process__desc">Hand-coded builds, tested across devices, optimized for speed and SEO from the first commit.</p>
-          </li>
-          <li class="process__step reveal" data-reveal data-reveal-delay="300">
-            <span class="process__number">04</span>
-            <h3 class="process__title">Launch</h3>
-            <p class="process__desc">We ship, monitor and iterate — with a 30-day post-launch window to tune based on real user data.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+    function App() {
+      return (
+        <div 
+          className="relative min-h-screen flex flex-col bg-black text-white overflow-hidden"
+          style={{ fontFamily: '"Helvetica Now Var", Helvetica, Arial, sans-serif' }}
+        >
+          {/* BACKGROUND VIDEO */}
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          >
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260613_180732_a54afbf6-b30d-470e-861f-669871f09f67.mp4" type="video/mp4" />
+          </video>
 
-    <section class="why">
-      <div class="container">
-        <div class="section-heading reveal" data-reveal>
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Why Evolix</p>
-          <h2 class="section-title">What makes the process actually work.</h2>
-        </div>
+          {/* CONTENT WRAPPER */}
+          <div className="relative z-10 flex flex-col min-h-screen justify-between">
+            
+            {/* NAVIGATION BAR */}
+            <nav className="flex items-center justify-between px-6 md:px-12 lg:px-16 py-5">
+              {/* Logo */}
+              <a href="#" className="flex items-center gap-3">
+                <LogoIcon className="w-8 h-8" />
+                <span className="text-white text-xl font-bold tracking-wider">EVOLIX</span>
+              </a>
 
-        <div class="why__grid">
-          <div class="why__cards">
-            <div class="why-card reveal" data-reveal>
-              <div class="why-card__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.5 13.5H11L10 22L18.5 9.5H12L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              {/* Login Button */}
+              <div className="flex items-center">
+                <a 
+                  href="#" 
+                  className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-white text-sm font-semibold px-6 py-2.5 rounded-full flex items-center gap-2 hover:brightness-110 transition-all"
+                >
+                  LOG IN
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
-              <h3 class="why-card__title">Speed without shortcuts</h3>
-              <p class="why-card__desc">Hand-coded builds ship faster than most agencies' proposals — and outperform template-based sites on every metric that matters.</p>
-            </div>
-            <div class="why-card reveal" data-reveal data-reveal-delay="80">
-              <div class="why-card__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L20 6V12C20 17 16.5 20.5 12 22C7.5 20.5 4 17 4 12V6L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </nav>
+
+            {/* HERO / MAINTENANCE SECTION */}
+            <main className="flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-12 sm:py-16 md:py-0">
+              {/* Status Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wider uppercase mb-6 sm:mb-8 backdrop-blur-md">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                System Upgrade In Progress
               </div>
-              <h3 class="why-card__title">One team, zero handoffs</h3>
-              <p class="why-card__desc">Strategy, design, engineering and photography under one roof — no lost context between disconnected vendors.</p>
-            </div>
-            <div class="why-card reveal" data-reveal data-reveal-delay="160">
-              <div class="why-card__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 9L11 13L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+              <h1 className="text-white/80 text-lg xs:text-2xl sm:text-3xl md:text-5xl font-light leading-snug tracking-tight mb-1 sm:mb-2">
+                We're upgrading our systems
+              </h1>
+              <h1 className="text-white/80 text-lg xs:text-2xl sm:text-3xl md:text-5xl font-light leading-snug tracking-tight mb-8 sm:mb-12">
+                This site is currently under maintenance
+              </h1>
+
+              {/* Giant Maintenance Text */}
+              <div className="relative mb-8 sm:mb-12 w-full flex justify-center overflow-visible">
+                <span className="text-[32px] xs:text-[48px] sm:text-[72px] md:text-[100px] lg:text-[130px] font-black text-white leading-none tracking-tighter select-none four-oh-four uppercase whitespace-nowrap">
+                  MAINTENANCE
+                </span>
               </div>
-              <h3 class="why-card__title">Data-backed decisions</h3>
-              <p class="why-card__desc">Every design choice is tied to a metric we track post-launch — conversion, load time, retention — not just aesthetics.</p>
-            </div>
-            <div class="why-card reveal" data-reveal data-reveal-delay="240">
-              <div class="why-card__icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 21C4 16.5 7.5 14 12 14C16.5 14 20 16.5 20 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+
+              {/* Action Button */}
+              <a 
+                href="#" 
+                className="liquid-glass text-white text-[10px] xs:text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] font-medium px-6 sm:px-8 py-3 sm:py-3.5 rounded-full uppercase inline-block hover:brightness-125 transition-all"
+              >
+                Back Online Soon
+              </a>
+            </main>
+
+            {/* FOOTER */}
+            <footer className="relative z-10 px-6 md:px-12 lg:px-16 pb-8 sm:pb-10 pt-10 sm:pt-16 border-t border-white/10">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl mx-auto">
+                
+                {/* Newsletter Section */}
+                <div className="w-full md:w-auto max-w-sm">
+                  <h3 className="text-white text-[10px] sm:text-xs font-bold tracking-[0.15em] mb-3">
+                    JOIN FOR EXCLUSIVE DEALS
+                  </h3>
+                  <form onSubmit={e => e.preventDefault()} className="flex flex-row">
+                    <input 
+                      type="email" 
+                      placeholder="Type your email to sign up" 
+                      className="bg-white text-gray-900 px-4 py-2.5 rounded-l-md text-xs placeholder:text-gray-400 focus:outline-none w-full"
+                    />
+                    <button 
+                      type="submit" 
+                      className="bg-gradient-to-r from-emerald-400 to-cyan-500 text-white px-5 py-2.5 rounded-r-md text-xs font-bold tracking-wider hover:brightness-110 transition-all whitespace-nowrap"
+                    >
+                      SEND IT
+                    </button>
+                  </form>
+                </div>
+
+                {/* Social Links & Copyright */}
+                <div className="flex flex-col items-center md:items-end gap-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-white/50 text-xs font-bold tracking-widest mr-1">CONNECT</span>
+                    <a href="#" className="text-white/50 hover:text-white transition-colors" aria-label="Facebook"><Facebook className="w-4 h-4" /></a>
+                    <a href="#" className="text-white/50 hover:text-white transition-colors" aria-label="Twitter"><Twitter className="w-4 h-4" /></a>
+                    <a href="#" className="text-white/50 hover:text-white transition-colors" aria-label="Dribbble"><Dribbble className="w-4 h-4" /></a>
+                    <a href="#" className="text-white/50 hover:text-white transition-colors" aria-label="Youtube"><Youtube className="w-4 h-4" /></a>
+                    <a href="#" className="text-white/50 hover:text-white transition-colors" aria-label="Linkedin"><Linkedin className="w-4 h-4" /></a>
+                    <a href="#" className="text-white/50 hover:text-white transition-colors" aria-label="Instagram"><Instagram className="w-4 h-4" /></a>
+                  </div>
+                  <p className="text-white/40 text-xs tracking-wider">
+                    © 2026 EVOLIX. All rights reserved.
+                  </p>
+                </div>
+
               </div>
-              <h3 class="why-card__title">Senior talent only</h3>
-              <p class="why-card__desc">No juniors learning on your budget. Every project is led by senior designers and engineers with 8+ years of experience.</p>
-            </div>
-          </div>
-
-          <div class="why__counters glass reveal" data-reveal data-reveal-delay="120">
-            <div class="why__counter">
-              <span class="counter" data-target="97" data-suffix="%">0</span>
-              <p>Client retention rate</p>
-            </div>
-            <div class="why__counter">
-              <span class="counter" data-target="14" data-suffix=" days">0</span>
-              <p>Average time to first draft</p>
-            </div>
-            <div class="why__counter">
-              <span class="counter" data-target="9" data-suffix=" yrs">0</span>
-              <p>Average team experience</p>
-            </div>
-            <div class="why__counter">
-              <span class="counter" data-target="3" data-suffix="x">0</span>
-              <p>Average conversion lift</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="container">
-        <div class="section-heading reveal" data-reveal>
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Client Voices</p>
-          <h2 class="section-title">Trusted by founders who care about the details.</h2>
-        </div>
-
-        <div class="testimonials__slider" id="testimonialsSlider" aria-roledescription="carousel" aria-label="Client testimonials">
-          <div class="testimonials__track" id="testimonialsTrack">
-
-            <blockquote class="testimonial-card glass" aria-hidden="false">
-              <div class="testimonial-card__rating" aria-label="Rating: 5 out of 5">★★★★★</div>
-              <p class="testimonial-card__quote">Evolix rebuilt our entire storefront in six weeks and our conversion rate nearly doubled. They think like operators, not just designers.</p>
-              <footer class="testimonial-card__author">
-                <img src="assets/testimonials/dana-oyelaran.jpg" alt="Portrait of Dana Oyelaran" loading="lazy" width="48" height="48">
-                <div>
-                  <cite class="testimonial-card__name">Dana Oyelaran</cite>
-                  <span class="testimonial-card__company">Founder, Solace Home</span>
-                </div>
-              </footer>
-            </blockquote>
-
-            <blockquote class="testimonial-card glass" aria-hidden="true">
-              <div class="testimonial-card__rating" aria-label="Rating: 5 out of 5">★★★★★</div>
-              <p class="testimonial-card__quote">Our Amazon A+ content had been stale for two years. Evolix's redesign lifted our conversion rate by 31% in the first month alone.</p>
-              <footer class="testimonial-card__author">
-                <img src="assets/testimonials/marcus-tran.jpg" alt="Portrait of Marcus Tran" loading="lazy" width="48" height="48">
-                <div>
-                  <cite class="testimonial-card__name">Marcus Tran</cite>
-                  <span class="testimonial-card__company">CEO, Northpeak</span>
-                </div>
-              </footer>
-            </blockquote>
-
-            <blockquote class="testimonial-card glass" aria-hidden="true">
-              <div class="testimonial-card__rating" aria-label="Rating: 5 out of 5">★★★★★</div>
-              <p class="testimonial-card__quote">What impressed me most was the communication. We always knew exactly where the project stood — and it launched two days early.</p>
-              <footer class="testimonial-card__author">
-                <img src="assets/testimonials/priya-nathan.jpg" alt="Portrait of Priya Nathan" loading="lazy" width="48" height="48">
-                <div>
-                  <cite class="testimonial-card__name">Priya Nathan</cite>
-                  <span class="testimonial-card__company">Head of Growth, Gridworks</span>
-                </div>
-              </footer>
-            </blockquote>
-
-            <blockquote class="testimonial-card glass" aria-hidden="true">
-              <div class="testimonial-card__rating" aria-label="Rating: 5 out of 5">★★★★★</div>
-              <p class="testimonial-card__quote">The custom dashboard Evolix built now runs our entire fulfillment operation. It paid for itself within the first quarter.</p>
-              <footer class="testimonial-card__author">
-                <img src="assets/testimonials/james-okafor.jpg" alt="Portrait of James Okafor" loading="lazy" width="48" height="48">
-                <div>
-                  <cite class="testimonial-card__name">James Okafor</cite>
-                  <span class="testimonial-card__company">COO, Meridian Outdoor</span>
-                </div>
-              </footer>
-            </blockquote>
+            </footer>
 
           </div>
-
-          <div class="testimonials__controls">
-            <button class="testimonials__arrow" id="testimonialPrev" aria-label="Previous testimonial">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="testimonials__dots" id="testimonialDots" role="tablist" aria-label="Select testimonial"></div>
-            <button class="testimonials__arrow" id="testimonialNext" aria-label="Next testimonial">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
         </div>
-      </div>
-    </section>
+      );
+    }
 
-    <section class="cta-band">
-      <div class="container">
-        <div class="cta-band__panel glass reveal" data-reveal>
-          <p class="eyebrow"><span class="eyebrow__dot"></span>Get In Touch</p>
-          <h2 class="cta-band__title">Ready to work with a team that operates like this?</h2>
-          <a href="contact.html" class="btn btn--primary btn--lg btn--ripple">
-            <span>Start a Project</span>
-            <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">
-          <img src="assets/logo/evolix-mark.svg" alt="" width="32" height="32">
-          <span>EVOLIX</span>
-        </a>
-        <p class="footer__tagline">Business Growth & Technology Agency</p>
-        <div class="footer__social">
-          <a href="https://instagram.com/evolix.agency" aria-label="Evolix on Instagram" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-          </a>
-          <a href="https://linkedin.com/company/evolix" aria-label="Evolix on LinkedIn" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 10V17M7 7V7.01M12 17V13C12 11.5 13 10.5 14.5 10.5C16 10.5 17 11.5 17 13V17M12 10.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </a>
-          <a href="https://x.com/evolixagency" aria-label="Evolix on X" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4L20 20M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </a>
-          <a href="https://dribbble.com/evolix" aria-label="Evolix on Dribbble" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M4 10C8 11 16 11 20 8M3 15C8 13 17 15 19 19M12 3C14 7 15 13 13 21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <nav class="footer__col" aria-label="Quick links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <nav class="footer__col" aria-label="Services">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services/website-development.html">Website Development</a></li>
-          <li><a href="services/branding.html">Branding</a></li>
-          <li><a href="services/amazon-aplus-content.html">Amazon A+ Content</a></li>
-          <li><a href="services/product-photography.html">Product Photography</a></li>
-          <li><a href="services/custom-software.html">Custom Software</a></li>
-          <li><a href="services/digital-marketing.html">Digital Marketing</a></li>
-        </ul>
-      </nav>
-
-      <div class="footer__col footer__newsletter">
-        <h4>Stay in the loop</h4>
-        <p>Growth insights and case studies, once a month. No spam.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <label for="newsletterEmail" class="sr-only">Email address</label>
-          <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="you@company.com" required aria-required="true">
-          <button type="submit" aria-label="Subscribe">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </form>
-        <p class="form-status" id="newsletterStatus" role="status" aria-live="polite"></p>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <p>&copy; <span id="currentYear">2026</span> Evolix Agency LLC. All rights reserved.</p>
-      <ul class="footer__legal">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
-
-
-  <script src="js/database.js" defer></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/gallery.js" defer></script>
-  <script src="js/animations.js" defer></script>
+    const rootElement = document.getElementById('root');
+    const root.render(<App />);
+  </script>
 </body>
 </html>

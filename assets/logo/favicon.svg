@@ -1,10 +1,30 @@
-<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="evolixGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2D8CFF"/>
-      <stop offset="100%" stop-color="#63B3FF"/>
+    <linearGradient id="evolixGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E59B34"/>
+      <stop offset="100%" stop-color="#C47F22"/>
     </linearGradient>
   </defs>
-  <rect x="1" y="1" width="30" height="30" rx="8" fill="#0E1628" stroke="url(#evolixGrad)" stroke-width="1.5"/>
-  <path d="M10 10H22L17.5 16L22 22H10L14.5 16L10 10Z" fill="url(#evolixGrad)"/>
+  <!-- Left Dark Bar -->
+  <path 
+    d="M 95 125 C 95 105, 110 95, 137 95 L 137 295 C 110 295, 95 285, 95 265 Z" 
+    fill="#2D2D2D" 
+    stroke="#444444"
+    stroke-width="2"
+  />
+  <!-- Top Arm -->
+  <path 
+    d="M 137 95 L 223 45 L 265 70 L 137 145 Z" 
+    fill="url(#evolixGoldGrad)" 
+  />
+  <!-- Middle Arm -->
+  <path 
+    d="M 137 175 L 314 105 L 314 158 L 137 235 Z" 
+    fill="url(#evolixGoldGrad)" 
+  />
+  <!-- Bottom Arm -->
+  <path 
+    d="M 137 245 L 223 295 L 314 245 L 314 298 L 223 348 L 137 295 Z" 
+    fill="url(#evolixGoldGrad)" 
+  />
 </svg>
